@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="itemMain"
+            type="com.example.learnsource.ItemMainList" />
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+android:background="@drawable/item_main_layout_border"
+    onClickedNavigation="@{itemMain}"
+
+    android:layout_margin="10dp"
+    >
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="308dp"
+        android:layout_height="65dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="@{itemMain.title}"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ImageUpdateItem"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        updateItem="@{itemMain}"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/pencil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
